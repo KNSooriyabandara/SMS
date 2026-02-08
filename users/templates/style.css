@@ -28,9 +28,21 @@ body {
   color: #512da8;
   font-weight: 600;
   font-size: 2rem; /* base size */
+  background:linear-gradient(90deg,#512da8,#9a60dc,#512da8);
+  background-size:300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite;
+
+}
+@keyframes gradientMove{
+  0%{background-position: 0% center;
+  }
+  100%{background-position: 100% center;}
 }
 
-/* 📱 Mobile adjustments */
+/* Mobile adjustments */
 @media (max-width: 480px) {
   .header {
     padding: 15px;
@@ -42,14 +54,14 @@ body {
   }
 }
 
-/* 💻 Tablet adjustments */
+/*Tablet adjustments */
 @media (min-width: 481px) and (max-width: 768px) {
   .title {
     font-size: 1.8rem;
   }
 }
 
-/* 🖥️ Large desktop */
+/*Large desktop */
 @media (min-width: 1024px) {
   .title {
     font-size: 2.5rem;
@@ -69,7 +81,7 @@ body {
 }
 @media (min-width: 1024px) {
   .container {
-    max-width: 1000px; /* only cap width on big screens */
+    max-width: 1400px; /* only cap width on big screens */
   }
 }
 
@@ -162,7 +174,7 @@ body {
   background-color: #f9f9f9;
   border-radius: 8px;
   overflow: hidden;
-  min-width: 400px; /* prevents columns from squishing too much */
+  min-width: 600px; /* prevents columns from squishing too much */
 }
 
 .table-section th,
