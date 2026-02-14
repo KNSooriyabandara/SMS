@@ -135,3 +135,13 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,                # blacklist old refresh
     "AUTH_HEADER_TYPES": ("Bearer",),                # standard Authorization header
 }
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+# Where Django will collect static files when you run `collectstatic`
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Additional directories where Django looks for static files during development
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
