@@ -3,7 +3,7 @@ from .views import (
     ListStudents, RetrieveStudent, RegisterStudent,
     CreateNote, ListNotes,
     LogoutView, EditStudent, DeleteStudent,
-    EditNote, DeleteNote
+    EditNote, DeleteNote,LoginView,DashboardView,
 )
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
@@ -27,4 +27,7 @@ urlpatterns = [
 
     # Logout endpoint
     path('api/logout/', LogoutView.as_view(), name='logout'),
+
+    path('user/login', LoginView.as_view(), name='login' ),
+    path('user/dashboard', DashboardView.as_view(), name='dashboard'),
 ]
